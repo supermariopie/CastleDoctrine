@@ -40,3 +40,6 @@ Tile IDs:
 Build defenses to a house, and then invade it!
 
 Time is turn based in this game -- one movement of the player (one tile move) is one time unit.
+
+
+I am trying this edit in the AndrewPractice branch ... 
