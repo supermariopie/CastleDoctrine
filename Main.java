@@ -4,12 +4,15 @@ import java.lang.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.awt.image.*;
+
 class Main extends JApplet {
   public static Keychecker God = new Keychecker();
   public static Mousechecker Jesus = new Mousechecker();
   HashMap<Integer, Tile> derict = new HashMap<Integer, Tile>();
 
-    
+  final int NUM_IMAGES = 3;
+  
   public static void main(String[] args) {
     /* HashMap Setup */
     Tile emptytile = new Tile() {
@@ -39,9 +42,10 @@ class Main extends JApplet {
 	h = bigimage.getHeight(null);
 	
 	/* Will continue here by splitting the big image */
-	for (int i = 0; i < h; i+= 128) {
-		for (int j = 0; j < w; j+= 128) {
-			
+	for (int i = 0; i < h && i * w + j < NUM_IMAGES; i+= 128) {
+		for (int j = 0; j < w && i * w + j < NUM_IMAGES; j+= 128) {
+			//derict.get(i * w + j).setImage() //continue here
+			//use getSubImage
 		}
 	}
     System.out.println("Hello world!");
