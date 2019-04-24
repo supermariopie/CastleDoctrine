@@ -14,7 +14,15 @@ public class Sprite {
 	Image image;
 	boolean visible;
 	ClassLoader cl;
+	
+	public Sprite(String name) {
+		cl = this.getClass().getClassLoader();
+		
+		image = (new ImageIcon(cl.getResource(name))).getImage();
 
+		w = image.getWidth(null);
+		h = image.getHeight(null);
+	}
 	public Sprite (int x, int y, String name) {
 		cl = this.getClass().getClassLoader();
 		
