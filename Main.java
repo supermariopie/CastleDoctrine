@@ -30,7 +30,20 @@ class Main extends JApplet {
       }
     };
     /* End HashMap Setup */
-
+	/* Image file setup */
+	/* The width is 128 px */
+	ClassLoader cl = this.getClass().getClassLoader();
+	ImageIcon bigimage = new ImageIcon(cl.getResource(filename)).getImage();
+	
+	w = bigimage.getWidth(null);
+	h = bigimage.getHeight(null);
+	
+	/* Will continue here by splitting the big image */
+	for (int i = 0; i < h; i+= 128) {
+		for (int j = 0; j < w; j+= 128) {
+			
+		}
+	}
     System.out.println("Hello world!");
   }
   
